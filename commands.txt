@@ -1,2 +1,8 @@
 npm init -y
 npm install cypress --save-dev
+npm install --save-dev cypress-ntlm-auth
+
+
+set DEBUG=cypress:plugin:ntlm-auth
+./node_modules/.bin/ntlm-proxy
+./node_modules/.bin/cypress-ntlm open
