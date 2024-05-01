@@ -9,8 +9,9 @@ describe('Logging In - NTLM', function () {
     const wait_time = 1000
 
     it('NTLM login', () => {
+      cy.ntlmSso(["win-mm8glctgeq2.migraven.ir"])
       cy.ntlm(["win-mm8glctgeq2.migraven.ir"], "administrator", "MIG@rasht.2024");
-      //cy.ntlmSso(["win-mm8glctgeq2.migraven.ir"])
+      
     })
 
     it('Home page',()=>{
