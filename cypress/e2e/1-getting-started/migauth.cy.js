@@ -17,6 +17,8 @@ describe('Logging In - NTLM', function () {
     it('Home page',()=>{
 
       cy.visit("http://win-mm8glctgeq2.migraven.ir");
+      
+      cy.get('#mainPartialArea').should('not.be.empty')
 
       cy.wait(wait_time)
     
@@ -38,8 +40,8 @@ describe('Logging In - NTLM', function () {
       cy.wait(wait_time)
       cy.get(".navigation-category").eq(2).click()
       cy.wait(wait_time)
-      // cy.get(".navigation-category").eq(3).click()
-      // cy.wait(wait_time)
+      cy.get(".navigation-category").eq(3).click()
+      cy.wait(wait_time)
       // cy.get(".navigation-category").eq(4).click()
       // cy.wait(wait_time)
       // cy.get(".navigation-category").eq(5).click()
